@@ -1,0 +1,47 @@
+.setting-icon {
+    margin: 60px 0px 0px 60px;
+    position: absolute;
+    clip: rect(0px,200px,200px,0px);
+}
+
+.subject {
+    color:#9f0500;
+    font-family: "Sofia", sans-serif;
+    margin: 60px 0px 0px 120px;
+    position: absolute;
+    font-size: 25px;
+
+}
+
+.content{
+    position: static;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+
+
+
+.car_btn {
+    width: 250px;
+    background-color:  #fa2a00 #f2d694;
+    color: #9f0500;
+    padding: 10px;
+    line-height: 50px;
+    text-align: left;
+    text-indent: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+  border-color :#9f0500;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    margin: 30px;
+}
+
+.car_btn:hover {
+    background-color: #F7F7F7;
+}
+
+.car_btn img {
+    float: left;
+}

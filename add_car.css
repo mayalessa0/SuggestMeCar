@@ -1,0 +1,232 @@
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) 
+@media screen and (max-height: 576px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  h1{font-size: 100%; padding-top:10px;}
+  body{ width:70%;}
+  .cover-media-img{width:90%;}
+}*/
+ 
+
+h1 {
+    text-align: center;
+    color:#111;
+    font-size: 300%;
+    font-family:"Montserrat";
+    margin:0;
+    padding-top:20px;
+}
+
+.cover-media-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  border-style: outset;
+  opacity: 0.7;
+}
+
+
+h2 {
+    text-align: center;
+    color:#9f0500;
+    font-family: "Sofia", sans-serif;
+    margin-left: 0px
+}
+
+
+
+body{
+    border-style: solid;
+    border-color:#faf5ef;
+    border-width: 0px 190px 0px 190px;
+    width:70%; 
+    margin: auto;
+    font-family: "Trirong", serif;
+}
+
+form{
+    margin-left: 100px;
+    margin-right: auto;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #e7dfd4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+#wrap {  width: 100%; }
+#header h1,
+#nav #header  { float: right; margin-right:25%; }
+
+input[type=text],input[type=number],select{
+    width: 50%;
+    height:40px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+button {
+  width: 250px;
+  background-color:  #fa2a00 #f2d694;
+  color: #9f0500;
+  padding: 15px;
+  font-size: 20px;
+  margin: 30px;
+  cursor: pointer;
+  border-radius: 12px;
+  border-color :#9f0500;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/*Customize checkbox list (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 12px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #9f0500;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 5px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*----------------------------*/
+.slidecontainer {
+  width: 80%; /* Width of the outside container */
+}
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;   
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #9f0500;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #9f0500;
+    cursor: pointer;
+}
+
+/*------------------------*/
+
+.car-img{
+    width: 30%;
+    height: 50%;
+    border-style: outset;
+}
+

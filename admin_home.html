@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+    <!-- links that import css file and fonts resources-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="admin_home.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat|Sofia|Trirong' >
+    <script src="scripts.js"></script>
+
+    <!--page title that showen on tap -->
+    <title>Suggest me a car</title>
+    
+   
+
+</head>
+
+
+<body>
+    <!-- to wrap nav and header togather-->
+    <div id="wrap">
+        <div id="header">
+            
+            <!--page header-->
+            <h1>SUGGEST ME A CAR</h1>
+            
+            <!--left nivegation menue -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="javascript:openLoginForm();">Log In</a>
+                <a href="about.html">About</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer; margin-left:30px" onclick="openNav()">&#9776;</span>
+            
+        </div>
+    </div>
+    <br/><br/>
+    <hr /> <!-- horizantal line-->
+    
+    <img  class="setting-icon" src="https://cdn-icons-png.flaticon.com/512/244/244009.png" width="50">
+    
+    <div class="subject"><u>Control Panel</u></div>
+    
+    <br/><br/><br/><br/>
+    <div class="content">
+    <button class='car_btn' onclick="rediregtPage('search.php?myBudget=1000000&model=&cylinders=&image_value=&engine=&Preference%5B%5D=&Features%5B%5D=')">
+        <script src="scripts.js"></script>
+        
+        <img src="https://cdn2.iconfinder.com/data/icons/modern-transport-and-car-service-innovicons-black-/128/button-computer_diagnostics-monitor-screen-car-512.png" width="50">
+    Display All Car
+    </button>
+  
+   
+    <button class='car_btn' onclick="rediregtPage('add_car.html')">
+        <script src="scripts.js"></script>
+        <img src="https://static.thenounproject.com/png/621382-200.png" width="50">
+    Add New Car
+    </button>
+   
+
+    <button class='car_btn' onclick="rediregtPage('update_car.php')">
+        <img src="https://static.thenounproject.com/png/2603483-200.png" width="50">
+        
+    Update Existing Car
+    </button>
+    
+    
+    <button class='car_btn' onclick="rediregtPage('delete_car.php')">
+        <img src="https://cdn2.iconfinder.com/data/icons/car-14/100/Remove_Car-512.png" width="50">
+    Delete Existing Car
+    </button>
+
+
+   
+   </div>
+   
+    
+   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+    
+
+    <!-- create a popup form with CSS and JavaScript for login-->  
+    <div class="form-popup" id="loginForm">
+      <form action="login.php" class="form-container" method="get">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Enter your username" name="username" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter your password" name="psw" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn" onclick="closeLoginForm()">Close</button>
+      </form>
+    </div>
+    
+
+    
+    <footer>
+        <hr /> 
+        <p style="font-size :12px; margin:20px;"> Copyright © King saud university - 
+        Graduation Project of Information System department for 1443-1444 / 2021-2022</p>
+        
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+body{
+    border-style: solid;
+    border-color:#faf5ef;
+    border-width: 0px 190px 0px 190px;
+    width:70%; 
+    margin: auto;
+    font-family: "Trirong", serif;
+}
+
+h1 {
+    text-align: center;
+    color:#111;
+    font-size: 300%;
+    font-family:"Montserrat";
+    margin:0;
+    padding-top:20px;
+}
+
+h2 {
+    text-align: center;
+    color:#9f0500;
+    font-family: "Sofia", sans-serif;
+    margin-left: 0px
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #e7dfd4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+#wrap {  width: 100%; }
+#header h1,
+#nav #header  { float: right; margin-right:25%; }
+
+.CarContainer{
+    margin: 15px auto 30px auto;
+    width: 60%;
+    border-style: outset;
+    padding: 35px;
+}
+.carinfo{
+    position: relative;
+}
+
+.car-img{
+    float: right;
+    width: 50%;
+    height: 90%;
+    border-style: outset;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.car-name{
+    font-size:2em;
+    color:#84857E;
+    font-family: 'Josefin Sans', sans-serif;
+}

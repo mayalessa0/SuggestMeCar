@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+    <!-- links that import css file and fonts resources-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat|Sofia|Trirong' >
+    <script src="scripts.js"></script>
+
+    <!--page title that showen on tap -->
+    <title>Suggest me a car</title>
+
+</head>
+
+
+<body>
+    <!-- to wrap nav and header togather-->
+    <div id="wrap">
+        <div id="header">
+            
+            <!--page header-->
+            <h1>SUGGEST ME A CAR</h1>
+            
+            <!--left nivegation menue -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="javascript:openLoginForm();">Log In</a>
+                <a href="about.html">About</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer; margin-left:30px" onclick="openNav()">&#9776;</span>
+            
+        </div>
+    </div>
+    <br/><br/>
+    <hr /> <!-- horizantal line-->
+    <!-- cover image-->
+    <p><img alt=""  class="cover-media-img" src="https://img1.wsimg.com/isteam/stock/98073/:/rs=w:1160,h:773"></p>
+    <!-- header 2-->
+    <h2>We'll help find the perfect car for you!</h2>
+    
+    
+    
+    <!-- form that contains car info filled and submit by user-->
+    <form action="search.php" method="get">
+
+        <br/>
+        <p><label>Your Budget:</label>
+        <!-- To create a round slider handle for budget input-->
+        <div class="slidecontainer">
+            <!-- max value is 1 Million min value is 50 thousands -->
+            <input  type="range" min="50000" max="1000000" value="500000" class="slider" id="myRange" name="myBudget">
+            <span id="budget"></span> SR
+        </div>
+        <!-- Create a dynamic range slider to display the current value, with JavaScript: -->
+        <script src="scripts.js"></script>
+        
+        <br/>
+        <p><label for="model">Car Model:</label> 
+        <!-- drop list for model-->
+        <select id="model" name="model">
+            <option value="">Any</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option> 
+        </select>
+        
+        <label style=" margin-left: 100px">Number Of Cylinders:</label>
+        <select id="cylinders" name="cylinders">
+            <option value="">Any</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option> 
+        </select></p>
+        <br/>
+        
+        <p><label for="Body">Car Body:</label></p>
+        <input id="image-field" type="text" value="" hidden name="image_value" />
+
+        <!-- image icons for body car-->
+        <div class="content_img">
+            <img src='images/sedan.jpg' id="img1" data-value="Sedan" onclick="setImageField(this)"/>
+            <div>Sedan</div>
+        </div>
+        
+        <div class="content_img">
+            <img src='images/Convertible.jpg' id="img2" data-value="Convertible" onclick="setImageField(this)"/>
+            <div>Convertible</div>
+        </div>
+        
+        <div class="content_img">
+            <img src='images/hatchback.jpg' id="img3" data-value="Hatchback" onclick="setImageField(this)"/>
+            <div>Hatchback</div>
+        </div>
+        
+        <div class="content_img">
+            <img src='images/muv.png' id="img4" data-value="Muv" onclick="setImageField(this)"/>
+            <div>MUV</div>
+        </div>
+        
+        <div class="content_img">
+            <img src='images/suv.jpg' id="img5" data-value="Suv" onclick="setImageField(this)"/>
+            <div>SUV</div>
+        </div>
+        
+        <div class="content_img">
+            <img style="padding-top:20px;" id="img6" src='images/coupe.jpg' data-value="Coupe" onclick="setImageField(this)"/>
+            <div>Coupe</div>
+        </div> 
+        
+        <div class="content_img">
+            <img  id="img7" src='images/pickup.jpeg' data-value="pickup" onclick="setImageField(this)"/>
+            <div>Pickup</div>
+        </div> 
+       
+
+        
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+        
+        <p><label for="engine" style=" float: none;">Engine Type:</label>
+        
+        <select id="engine" name="engine">
+            <option value="">Any</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Electric">Electric</option>
+            <option value="Hybrid">Hybrid</option>
+        </select></p>
+        
+        <br />
+        
+        <label for="prefrence">Car Preference: </label>
+        <label style="font-size: 12px; color:#a1a1a1">(you can choose multible option)</label>
+        <br/>			 	
+    
+        <!-- checkbox for car preference-->
+         <label class="container">Comfort
+          <input type="checkbox"  name="Preference[]" value="comfort">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Fuel Economy
+          <input type="checkbox"  name="Preference[]" value="fuel_economy">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Perfomance
+          <input type="checkbox" name="Preference[]" value="perfomance">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">After Sale Support Availability
+          <input type="checkbox" name="Preference[]" value="after_sale_support_availability">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Stylish
+          <input type="checkbox" name="Preference[]" value="stylish">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Safety
+          <input type="checkbox" name="Preference[]" value="safety">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">7-Seater
+          <input type="checkbox" name="Preference[]" value="7seater">
+          <span class="checkmark"></span>
+        </label>
+        
+        <br/>
+        <br/>
+        
+        <p></p><lebal>Car Features</lebal>
+        <label style="font-size: 12px; color:#a1a1a1">(you can choose multible option)</label>
+        <br/>
+        
+        <label class="container">Keyless Entry
+          <input type="checkbox"  name="Features[]" value="keyless_entry">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Rear View Camera
+          <input type="checkbox" name="Features[]" value="rear_view_camera">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Airbags
+          <input type="checkbox" name="Features[]" value="airbags">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">ABS
+          <input type="checkbox" name="Features[]" value="abs">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Parking Sensors
+          <input type="checkbox" name="Features[]" value="parking_sensors">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Bluetooth
+          <input type="checkbox" name="Features[]" value="bluetooth">
+          <span class="checkmark"></span>
+        </label>
+        
+        
+        <label class="container">Steering Mounted Controls
+          <input type="checkbox" name="Features[]" value="steering_mounted_controls">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Climate Control
+          <input type="checkbox" name="Features[]" value="climate_control">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Automatic
+          <input type="checkbox" name="Features[]" value="automatic">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Off-Road
+          <input type="checkbox" name="Features[]" value="off_road">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Sunroof
+          <input type="checkbox" name="Features[]" value="sun_roof">
+          <span class="checkmark"></span>
+        </label>
+        
+        <br/><br/>
+        <button>Submit</button> <!--type="submit" value="Submit" />-->
+    </form>
+    
+    <script>
+    
+    let field = document.getElementById("image-field");
+
+    function setImageField(img) {
+        //remove previous user select by remove image border using JavaScript
+        document.getElementById('img1').style.border = 0;
+        document.getElementById('img2').style.border = 0;
+        document.getElementById('img3').style.border = 0;
+        document.getElementById('img4').style.border = 0;
+        document.getElementById('img5').style.border = 0;
+        document.getElementById('img6').style.border = 0;
+        document.getElementById('img7').style.border = 0;
+        // add border around image that selected by user
+        let to_send = img.getAttribute("data-value");
+        field.setAttribute("value", to_send);
+        img.style.border = "1px solid blue";
+
+    }
+    </script>
+    
+    <!-- create a popup form with CSS and JavaScript for login-->  
+    <div class="form-popup" id="loginForm">
+      <form action="login.php" class="form-container" method="get">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Enter your username" name="username" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter your password" name="psw" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn" onclick="closeLoginForm()">Close</button>
+      </form>
+    </div>
+    
+
+    
+    <footer>
+        <hr /> 
+        <p style="font-size :12px; margin:20px;"> Copyright © King saud university - 
+        Graduation Project of Information System department for 1443-1444 / 2021-2022</p>
+        
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+    <!-- links that import css file and fonts resources-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat|Sofia|Trirong' >
+    <script src="scripts.js"></script>
+
+    <!--page title that showen on tap -->
+    <title>Suggest me a car</title>
+
+</head>
+
+
+<body>
+    <!-- to wrap nav and header togather-->
+    <div id="wrap">
+        <div id="header">
+            
+            <!--page header-->
+            <h1>SUGGEST ME A CAR</h1>
+            
+            <!--left nivegation menue -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="javascript:openLoginForm();">Log In</a>
+                <a href="about.html">About</a>
+            </div>
+            <span style="font-size:30px;cursor:pointer; margin-left:30px" onclick="openNav()">&#9776;</span>
+            
+        </div>
+    </div>
+    <br/><br/>
+    <hr /> <!-- horizantal line-->
+    
+    <h2>Car Suggestion Platform Like No Other</h2>
+    
+    
+    
+    
+   <div class="about-p">We know that our local market is the largest consumer market for cars in the Gulf and represent a great importance to car companies. During the last 3 years,  consumer look have changed in terms of buying cars, especially with women driving, so today we see a variety of new cars on the streets that we did not see few years ago, so the person who intends to buy a new car has become open to many options, and others want to educate themselves in terms of prices, so if You are looking to buy a car, you are in the right place. Suggest Me a Car platform is the best platform that advises you and guides you to choose the right car based on your preferences and desires by providing information about it, the location of the purchase, the agent and more.</div>
+    
+    <!-- create a popup form with CSS and JavaScript for login-->  
+    <div class="form-popup" id="loginForm">
+      <form action="login.php" class="form-container" method="get">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Username</b></label>
+        <input type="text" placeholder="Enter your username" name="username" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter your password" name="psw" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn" onclick="closeLoginForm()">Close</button>
+      </form>
+    </div>
+    
+
+    
+    <footer>
+        <hr /> 
+        <p style="font-size :12px; margin:20px;"> Copyright © King saud university - 
+        Graduation Project of Information System department for 1443-1444 / 2021-2022</p>
+        
+    </footer>
+
+</body>
+</html>
